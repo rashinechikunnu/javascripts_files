@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    name : <input type="text" id="foc" onfocus="focuson()">
+    
+    
+    <br><br>
+    keyalert : <input type="text" id="onkey" onkeydown="keydown()">
+    <br><br>
+    place : <input type="text" id="pl"  onkeyup="keey()">
+    <br><br>
+    son of : <input type="text" id="foc1" onfocus="focuson()" onblur="blr()">
+
+    <h1 id ="mouse" onmouseover="Mousover()" onmouseout="mouseout()"> mouse</h1>
+
+    <script>
+        function focuson() {
+        document.getElementById("foc1").style.background="black";
+        
+    }
+    function keydown() {
+       alert("dont press")
+    }
+    function keey() {
+       var x = document.getElementById("pl");
+       x.value = x.value.toUpperCase();
+    }
+
+    function blr() {
+        document.getElementById("foc1").style.background="red";
+
+    }
+    
+    function Mousover() {
+        
+    
+    
+        document.getElementById("mouse").style.color="blue";
+    }
+    function mouseout() {
+        
+        document.getElementById("mouse").style.color="yellow";
+    }
+    </script>
+</body>
+</html>

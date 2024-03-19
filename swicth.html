@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="dom"></p>
+
+
+
+    <script>
+        
+        let day = 6;
+        let value;
+        switch(day)
+        {
+            case 0:
+                value = "sunday";
+                break;
+            case 1:
+                value ="manday";
+                break;
+            case 2:
+                value = "tuseday";
+
+            case 3:
+                value = "wednesday";
+                break;
+            case 4:
+                value ="thursday";
+                break;
+            case 5:
+                value = "friday";
+                break;
+
+            case 6:
+                value = "saturday";
+                break;
+
+            default:
+                value ="not defained"
+
+
+
+        }
+
+        
+        document.getElementById("dom").innerHTML="day is " +value;
+    </script>
+    
+</body>
+</html>

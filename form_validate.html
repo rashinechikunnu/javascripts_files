@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        name   :<input type="text" id="name_1" minlength="3" maxlength="10" required onkeyup="clearop('sp1')">
+        <span id="sp1" style="color: red;"></span>
+        <br><br>
+
+        email  : <input type="text" id="email_1" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" onkeyup="clearop('sp2')">
+        <span id="sp2" style="color: red;"></span>
+        <br><br>
+
+        address: <input type="text" id="address_1"  onkeyup="clearop('sp3')">
+        <span id="sp3" style="color: red;"></span>
+        <br><br>
+
+        phonne : <input type="text" id="phone_1" required pattern="[0-9]{10}" onkeyup="clearop('sp4')">
+        <span id="sp4" style="color: red;"></span>
+        <br><br>
+
+        place  : <input type="text" id="place_1" onkeyup="clearop('sp5')">
+        <span id="sp5" style="color: red;"></span>
+<br>
+    <button onclick="return hi()">submit</button>
+</form>
+    
+    <script>
+        function hi() {
+           
+           var name=document.getElementById("name_1").value;
+            
+        
+           var eamil = document.getElementById("email_1").value;
+           var address = document.getElementById("address_1").value;
+           var phone = document.getElementById("phone_1").value;
+            var place = document.getElementById("place_1").value;
+
+            if(name=="")
+            {
+                document.getElementById("sp1").innerHTML="enter name*";
+                return false;
+            }
+            if(eamil=="")
+            {
+                document.getElementById("sp2").innerHTML="enter eamil*";
+                return false;
+            }
+
+            if(address=="")
+            {
+                document.getElementById("sp3").innerHTML="enter address*";
+                return false;
+            }
+
+            if(phone=="")
+            {
+                document.getElementById("sp4").innerHTML="enter phone number*";
+                return false;
+            }
+            if(place=="")
+            {
+                document.getElementById("sp5").innerHTML="enter place*";
+                return false;
+            }
+
+        }
+
+        function clearop(sp){
+           // document.getElementById(sp).innerHTML="";
+           document.getElementById(sp).innerHTML="";
+            
+        }
+
+
+    </script>
+</body>
+</html>
